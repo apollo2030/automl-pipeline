@@ -52,9 +52,13 @@ In this case I have chosen the **RandomParameterSampling** because "Random sampl
 The regularization strength is a linear value that is why the sampling is `uniform` from 0.5 to .99.
 the max_itter is discrete which fits the `choice` sampling strategy with incremental values from 1 to 128.
 
+The benefits of using the **RandomParameterSampling** are that the number of runs can be controlled and it provides a way to pinpoint a range of parameters that can be refined further with a **GridParameterSampling**.
+
 **RandomParameterSampling** is great for coarse guessing the right parameters, especially compared with **GridParameterSampling** which performs a grid search and has a P1xP2xP3 number of runs where P1, P2, P3 are the parameters to optimise. 
 
 The **GridParameterSampling** doesn`t allow for continuous parameters.
+
+The benefits of using a **GridParameterSampling** is that it allows for exploration of the entire parameter search space.
 
 An estimator is a instance of the `SKLearn` estimator that actually runs the training script.
 
